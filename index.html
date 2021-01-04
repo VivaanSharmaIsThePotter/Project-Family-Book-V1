@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project - Family Book</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            var imgs = ["IMG_0032.JPG", "e8e664d5-3d89-4a5a-b361-d95b214d23f1.JPG", "3d5321f6-05c6-4bb3-9197-3e14fdb96cdb.jpg", "IMG_3161.JPG",];
+            var names = ["Harsh Sharma - The Father", "Rima Sharma - The Mother", "Vivaan Sharma - The Son", "The Sharma Family"]; 
+            
+            function next_img() {
+
+             for (var i = 0; i < 4; i++) {
+                 document.getElementById("Text-Names").innerHTML = names[i];
+                 document.getElementById("IMAGES").innerHTML = imgs[i];
+             }
+
+             if (i == 4) {
+                 i = 0;
+             }
+
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Project - Family Book</h1>
+        <img id="IMAGES" src="IMG_3161.JPG" >
+        <h4 id="Text-Names">The Sharma Family</h4>
+        <br>
+        <button onclick="next_img()" id="button_next">Next Image</button>
+    </body>
+</html>
